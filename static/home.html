@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>
+My Web Form
+</title>
+<style>
+label {background-color: #cccc00;}
+</style>
+</head>
+
+<body>
+<h1 style="background-color:#ff6600; display:inline;"> Binary Search Game<br>
+</h1>
+
+<br>
+<h2 style="background-color:#4da6ff;display:inline;"> How to play? </h2><br>
+<h4 id = "HowToGame" style="border-style: solid;">
+<i>
+Aim of the game is to predict a number.<br>
+The number will be in between 1 to 100<br>
+Total number of chances to predict a number will be 10 at max.<br>
+After each wromg choice, a hint message will be displayed<br>
+The message can be one of the following strings<br>
+<ul>
+<span style="Background-color:#00e600;"><b>If you guessed right<b></span><br>
+<li>The "guessed number is correct. You Won !!</li>
+<span style="Background-color:#ff3333;"><b>And if you didn't guess right<b></span><br>
+<li> The number is greater than what you guessed. Guess Again !! </li>
+OR<br>
+<li> The number is less than what you guessed. Guess Again !! </li>
+</ul>
+
+If you are able to predict with in 10 chances, you win, otherwise you lose<br>
+</i>
+Ready???
+</h4>
+<br>
+<h4><span style="background-color:#ffff66;">Total Chances:</span>
+<div id = "ctr">10</div><h4>
+<br><br>
+<form id="myForm">
+  Your Choice:<br>
+  <input type="text" name="guess"><br>
+  Hint Message:<br>
+  <input type="text" name="Hint"><br>
+  <input type="submit" value="Submit" onclick="GuessNumber()">
+  
+</form>
+
+</body>
+<script>
+var label = document.getElementById("ctr");
+var labelvalue = label.textContent;
+var number = 0;
+var min=1; 
+var max=101;
+var guess;
+function GuessNumber()
+{
+	
+	if(labelvalue == "10")
+	{
+  
+		number =Math.floor(Math.random() * (+max - +min)) + +min;
+		var guess = document.getElementById("myForm").elements.namedItem("guess").value;
+		if(guess == number)
+		{
+			document.getElementById("Hint").value = "The guessed number is correct. You Won !!";
+		}
+		else if(guess > number)
+		{
+			document.getElementById("Hint").value = "The number is less than what you guessed. Guess Again !!";
+		}
+		else
+		{
+			document.getElementById("Hint").value = "The number is greater than what you guessed. Guess Again !!";
+		}
+		label.value = (parseInt(labelvalue,10) - 1).toString();
+	}
+	else
+	{
+		var guess = document.getElementById("myForm").elements.namedItem("guess").value;
+		if(guess == number)
+		{
+			document.getElementById("Hint").value = "The guessed number is correct. You Won !!";
+		}
+		else if(guess > number)
+		{
+			document.getElementById("Hint").value = "The number is less than what you guessed. Guess Again !!";
+		}
+		else
+		{
+			document.getElementById("Hint").value = "The number is greater than what you guessed. Guess Again !!";
+		}
+		label.value = (parseInt(labelvalue,10) - 1).toString();
+	}
+}
+</script>
+</html>
