@@ -13,7 +13,7 @@ function submitgame()
 	var number =Math.floor(Math.random() * (+max - +min)) + +min;
 	var value = document.getElementById("ctr").innerHTML;
 	var cancel;
-	while( value != 0)
+	while( value > 0)
 	{
 		var val = prompt('Guess the Number?');
 		if(val == null || val == "")
