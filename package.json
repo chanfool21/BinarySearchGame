@@ -1,16 +1,22 @@
 {
   "name": "html_db",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple web app",
   "main": "app.js",
-  "dependencies": {
-    "cat-me": "^1.0.3",
-    "express": "^4.16.4"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chanfool21/BinarySearchGame.git"
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chanfool21/BinarySearchGame/issues"
+  },
+  "homepage": "https://github.com/chanfool21/BinarySearchGame#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
