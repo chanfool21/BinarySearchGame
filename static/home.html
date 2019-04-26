@@ -10,13 +10,18 @@ label {background-color: #cccc00;}
 <script src ="main_script1.js"></script>
 </head>
 
-<body>
+<body style="background-image:url('itachi.jpg');  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;" >
 <h1 style="background-color:#ff6600; display:inline;"> Binary Search Game<br>
 </h1>
 
 <br>
 <h2 style="background-color:#4da6ff;display:inline;"> How to play? </h2><br>
-<h4 id = "HowToGame" style="border-style: solid;">
+<h4 id = "HowToGame" style="border-style: solid; background-color:#4da6ff;display:inline;">
 <i>
 Aim of the game is to predict a number.<br>
 The number will be in between 1 to 100<br>
@@ -25,20 +30,20 @@ After each wromg choice, a hint message will be displayed<br>
 The message can be one of the following strings<br>
 <ul>
 <span style="Background-color:#00e600;"><b>If you guessed right<b></span><br>
-<li>The "guessed number is correct. You Won !!</li>
+<span style="color:#4da6ff;"><li>The "guessed number is correct. You Won !!</li></span>
 <span style="Background-color:#ff3333;"><b>And if you didn't guess right<b></span><br>
-<li> The number is greater than what you guessed. Guess Again !! </li>
+<span style="color:#4da6ff;"><li> The number is greater than what you guessed. Guess Again !! </li></span>
 OR<br>
-<li> The number is less than what you guessed. Guess Again !! </li>
-</ul>
+<span style="color:#4da6ff;"><li> The number is less than what you guessed. Guess Again !! </li></span>
+</ul>	
 
 If you are able to predict with in 10 chances, you win, otherwise you lose<br>
 </i>
 Ready???
 </h4>
 <br>
-<h4><span style="background-color:#ffff66;">Total Chances:</span>
-<div id = "ctr">10</div><i class='em em-heartbeat'></i>
+<h4><span style="background-color:#f0fc05;">Total Chances:</span>
+<div id = "ctr" style="background-color:#f0fc05;display:inline;">10</div><br><i class='em em-heartbeat'></i>
 <br></h4>
 <button id ="click" onclick="submitgame()">Click to Play</button>
 

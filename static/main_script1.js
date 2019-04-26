@@ -39,7 +39,7 @@ function submitgame()
 	}
 	if(cancel == true)
 	{
-		document.getElementById("ctr").innerHTML = "The Game is fun, please try once";
+		document.getElementById("ctr").innerHTML = "<span style='color:#f4425f;'>The Game is fun, please try once";
 	}
 	else if(value > 0)
 	{

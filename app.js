@@ -3,14 +3,14 @@ console.log("Express app");
 var fs = require('fs');
 var express = require("express");
 app = express();
-app.use(express.static('C:/Users/ftw/Desktop/HTML_DB/static/'));
+app.use(express.static('C:/Users/mischanc/Desktop/HTML_DB/BinarySearchGame/static'));
 app.get("/", function(req,res){
 	res.send("Dak off");
 	});
 app.get("/des", function(req,res){
 	res.sendFile(__dirname+"/static/home.html");
 	});
-app.listen(8080, function()
+app.listen(8081, function()
 	{
 	console.log("Server has started");
 	});
